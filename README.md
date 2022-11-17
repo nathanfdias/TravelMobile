@@ -1,8 +1,6 @@
 # TravelMobile
 Project layout clone
 
-<img src="/travel/assets/layoutPinterest.png" width="100" heigth="200">
+<img src="/travel/assets/layoutPinterest.png" heigth="400">
 
-<video width="320" height="240" controls>
-    <source src="movie.mp4" type="video/mp4">
-</video>
+<video src="/travel/assets/page.mp4" width="420" height="340" type="video/mp4"/>
