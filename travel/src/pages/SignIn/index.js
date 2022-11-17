@@ -28,11 +28,11 @@ export default function SignIn() {
         <TextInput placeholder="Digite um email" style={styles.input} />
         <Text style={styles.title}>Senha</Text>
         <TextInput placeholder="Sua senha" style={styles.input} />
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonRegister}>
-          <Text style={styles.registerText} onPress={ () => navigation.navigate('Welcome')}>
+          <Text style={styles.registerText} >
             Não possui uma conta? Cadastre-se
           </Text>
         </TouchableOpacity>
