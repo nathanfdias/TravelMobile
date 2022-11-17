@@ -5,6 +5,7 @@ import { Feather } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
 
 import DiscoverPage from '../../components/DiscoverPage';
+import Stuffs from '../../components/Stuffs';
 
 export default function Home() {
     const navigation = useNavigation();
@@ -36,8 +37,16 @@ export default function Home() {
                 </Text>
             </View>
         </View>
-        <View style={styles.mainDiscover}>
-            <DiscoverPage />
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.mainDiscover}>
+            <DiscoverPage cover={require('../../assets/landscape2.jpg')} place='Santorini' country='Greece' flag={require('../../assets/grecia.png')} onPress={() => navigation.navigate('Detail')}/>
+            <DiscoverPage cover={require('../../assets/landscape1.jpg')} place='Park Ont' country='Canada' flag={require('../../assets/canada.png')} onPress={() => navigation.navigate('Detail')}/>
+            <DiscoverPage cover={require('../../assets/landscape3.jpg')} place='Thai Beach' country='Thailand' flag={require('../../assets/tailandia.png')} onPress={() => navigation.navigate('Detail')}/>
+        </ScrollView>
+        <View style={styles.footer}>
+            <Text style={{paddingHorizontal: 30, color: '#FFF', fontSize: 18, paddingBottom: 26}}>Book with us</Text>
+            <Stuffs name='coffee' title='Food'/>
+            <Stuffs name='home' title='Home'/>
+            <Stuffs name='wifi' title='Internet'/>
         </View>
    </ScrollView>
   );
@@ -84,6 +93,13 @@ const styles = StyleSheet.create({
     mainDiscover:{
         height: 340,
         backgroundColor: '#003580',
-        borderTopWidth: 1, borderTopColor: '#0003'
+        borderTopWidth: 1, borderTopColor: '#0003',
+        flexDirection: 'row',
+        padding: 20,
+        paddingLeft: 30,
+    },
+    footer:{
+        width: '100%',
+        backgroundColor: '#003580',
     }
 })
